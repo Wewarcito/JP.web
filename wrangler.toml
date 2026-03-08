@@ -1,0 +1,5 @@
+name = "jpluxury"
+compatibility_date = "2024-03-08"
+
+[pages]
+directory = "src"
