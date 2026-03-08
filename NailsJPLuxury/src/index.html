@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPLuxury | Estudio Premium de Uñas en Saravena</title>
+    <meta name="description" content="JPLuxury es tu estudio de estética de uñas premium en Saravena. Expertos en manicure, pedicure, uñas acrílicas, nail art profesional y las últimas tendencias 2026. ¡Agenda tu cita!">
+    <meta name="keywords" content="JPLuxury, manicure, pedicure, uñas acrílicas, nail art profesional, estética de uñas Saravena, uñas de lujo, diseños de uñas, tendencias de uñas 2026">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts for an elegant typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <!-- Se mostrará el PNG si existe; de lo contrario el alt text "JPLuxury" -->
+                <img src="assets/images/logo.png" alt="JPLuxury" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <span style="display:none;">JPLuxury</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn-primary">Agendar Ahora</a>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section (Landing) -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <h1>Belleza y Detalle en Cada Diseño de Uñas</h1>
+                <p>Manicure, pedicure y nail art profesional</p>
+                <a href="catalogo.html" class="btn-primary" style="margin-right: 15px;">Explorar Catálogo</a>
+                <a href="contacto.html" class="btn-primary" style="background: transparent; color: var(--color-gold);">Agendar Cita</a>
+            </div>
+        </section>
+
+        <!-- Preview Galería (Opcional para atraer usuarios) -->
+        <section class="section bg-light text-center">
+            <div class="container">
+                <h2 class="section-title">El Arte de Nuestras Manos</h2>
+                <p style="margin-bottom: 2rem;">Acabados perfectos e higiene garantizada. Descubre por qué JPLuxury es tu mejor opción.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <img src="assets/galeria/WhatsApp Image 2026-03-07 at 9.43.38 PM.jpeg" style="border-radius: 8px; max-width: 100%; width: 300px; height: 300px; object-fit: cover;" alt="Exhibición 1">
+                    <img src="assets/galeria/WhatsApp Image 2026-03-07 at 9.43.39 PM (1).jpeg" style="border-radius: 8px; max-width: 100%; width: 300px; height: 300px; object-fit: cover;" alt="Exhibición 2">
+                    <img src="assets/galeria/WhatsApp Image 2026-03-07 at 9.43.39 PM.jpeg" style="border-radius: 8px; max-width: 100%; width: 300px; height: 300px; object-fit: cover;" alt="Exhibición 3">
+                </div>
+                <div style="margin-top: 3rem;">
+                    <a href="galeria.html" class="btn-primary">Ver Galería Completa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">JPLuxury</h2>
+                <p>El arte de la manicuría y pedicuría premium. Resalta tu belleza con diseños exclusivos y un servicio de lujo.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/jp_luxury7/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/573219055451" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="catalogo.html">Catálogo Especializado</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 20 #20-59 Barrio José Vicente, Saravena</p>
+                <p><i class="fab fa-whatsapp"></i> +57 321 905 5451</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> JPLuxury. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart" style="color: var(--color-gold);"></i></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
