@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Citas | JPLuxury Estudio de Uñas en Saravena</title>
+    <meta name="description" content="Agenda tu cita de manicure, pedicure o uñas acrílicas en JPLuxury Saravena. Luce el mejor nail art profesional de la ciudad con las tendencias 2026.">
+    <meta name="keywords" content="contacto JPLuxury, citas uñas Saravena, agendar manicure, agendar pedicure, estudio de uñas Saravena contacto, WhatsApp salón de uñas, nail art profesional cita">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light">
+    <!-- Header Fijo -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="JPLuxury" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                <span style="display:none;">JPLuxury</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn-primary">Agendar Ahora</a>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <!-- Contact Section -->
+        <section id="contacto" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Contáctenos</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Díganos cómo podemos ayudarle</h3>
+                        <p>Estamos a su entera disposición para agendar servicios o responder cualquier consulta sobre tratamientos, diseños y disponibilidad.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/jp_luxury7/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/573219055451" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        
+                        <div class="location-box mt-2">
+                            <h3>Nuestra Ubicación</h3>
+                            <p class="location-address">
+                                <i class="fas fa-map-marker-alt gold-text"></i>
+                                <span><strong>JPLuxury Studio</strong><br>Calle 20 #20-59<br>Barrio José Vicente, Saravena</span>
+                            </p>
+                            <a href="https://maps.app.goo.gl/BKnnTdP6Dh2dRBUa9" target="_blank" class="btn-location">
+                                <i class="fas fa-directions"></i> Cómo llegar
+                            </a>
+                        </div>
+
+                        <div id="agenda" class="agenda-cta mt-2">
+                            <h3>Reserva Rápida</h3>
+                            <a href="https://wa.me/573219055451?text=Hola,%20deseo%20agendar%20una%20cita%20con%20JPLuxury." target="_blank" class="btn-primary">Reservar Vía WhatsApp</a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="booking-form" onsubmit="enviarWhatsApp(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Ej. Ana García" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">Tipo de Servicio</label>
+                            <select id="servicio" class="custom-select" required>
+                                <option value="" disabled selected>Seleccione un servicio...</option>
+                                <option value="Manicure Tradicional">Manicure Tradicional</option>
+                                <option value="Pedicure Tradicional">Pedicure Tradicional</option>
+                                <option value="Semipermanente">Esmaltado Semipermanente</option>
+                                <option value="Pedi Spa">Pedi Spa</option>
+                                <option value="Uñas Press On / Soft Gel">Uñas Press On / Soft Gel</option>
+                                <option value="Mantenimiento o Recubrimiento">Mantenimiento o Recubrimiento</option>
+                                <option value="Otro">Otro servicio / Asesoría</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha Preferida</label>
+                            <input type="date" id="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje Adicional</label>
+                            <textarea id="mensaje" placeholder="Ej. Deseo un diseño de francés clásico..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">
+                            <i class="fab fa-whatsapp"></i> Enviar Solicitud de Cita
+                        </button>
+                    </form>
+                    
+                    <script>
+                        function enviarWhatsApp(e) {
+                            e.preventDefault();
+                            
+                            const nombre = document.getElementById('nombre').value;
+                            const servicio = document.getElementById('servicio').value;
+                            const fecha = document.getElementById('fecha').value;
+                            const mensaje = document.getElementById('mensaje').value;
+                            
+                            const numeroWA = "573219055451";
+                            let textoMensaje = `Hola JPLuxury, deseo solicitar una cita.\n\n`;
+                            textoMensaje += `*Nombre:* ${nombre}\n`;
+                            textoMensaje += `*Servicio de interés:* ${servicio}\n`;
+                            textoMensaje += `*Fecha preferida:* ${fecha}\n`;
+                            if(mensaje) {
+                                textoMensaje += `*Detalles o preguntas:* ${mensaje}`;
+                            }
+                            
+                            const url = `https://wa.me/${numeroWA}?text=${encodeURIComponent(textoMensaje)}`;
+                            window.open(url, '_blank');
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">JPLuxury</h2>
+                <p>El arte de la manicuría y pedicuría premium. Resalta tu belleza con diseños exclusivos y un servicio de lujo.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/jp_luxury7/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/573219055451" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="catalogo.html">Catálogo Especializado</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 20 #20-59 Barrio José Vicente, Saravena</p>
+                <p><i class="fab fa-whatsapp"></i> +57 321 905 5451</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> JPLuxury. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart" style="color: var(--color-gold);"></i></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
