@@ -1,6 +1,6 @@
-# Cloudflare Pages doesn't strictly require a wrangler.toml for static sites,
-# but if you use one, it should be empty or use specific Pages fields.
-# For now, we will use a simple name to identify the project.
-
 name = "jpluxury"
 compatibility_date = "2024-03-08"
+
+[assets]
+directory = "./src"
+# binding = "ASSETS" # OPCIONAL: Descomentar si el sistema lo pide, pero solo 'directory' suele bastar.
